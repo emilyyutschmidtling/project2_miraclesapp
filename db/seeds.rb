@@ -6,15 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-posts = Post.create([
-  {
-    user_id: 1,
-    content: "Post 1 - If you can see this message, it's a miracle!!!  And here's a cat picture for fun..."
-    photo_url: "http://i.imgur.com/EBWst9O.jpg"
-  },
-  {
-    user_id: 2,
-    content: "Post 2 - Who you're gonna call?  Ghostbusters!"
-    photo_url: "http://t3.gstatic.com/images?q=tbn:ANd9GcQu6t289OZIOlPWU_AkeaL-3-kb2AywKUACnXSer1g_-pcpi0mi"
-  }
-])
+# posts = Post.create([
+#   {
+#     content: "Post 1 - If you can see this message, it's a miracle!!!  And here's a cat picture for fun...",
+#     photo_url: "http://i.imgur.com/EBWst9O.jpg"
+#   },
+#   {
+#     content: "Post 2 - Who you're gonna call?  Ghostbusters!",
+#     photo_url: "http://t3.gstatic.com/images?q=tbn:ANd9GcQu6t289OZIOlPWU_AkeaL-3-kb2AywKUACnXSer1g_-pcpi0mi"
+#   }
+# ])
