@@ -32,9 +32,9 @@ class PostsController < ApplicationController
 
   def update
 
-    @post = Post.find(params.require(:post).permit(:content, :photo_url, :first_name, :last_name, :nickname))
+    @post = Post.find(params[:id])
 
-    if @post.update_attributes(params.require(:post).permit(:content, :photo_url, :nickname))
+    if @post.update_attributes(params.require(:post).permit(:content, :photo_url, :first_name, :last_name, :nickname))
       redirect_to @post, notice: "Post successfully updated."
     else
       render :edit
