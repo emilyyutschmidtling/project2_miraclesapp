@@ -11,14 +11,16 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
-    @post.user_id = current_user.id
+    @post = current_user.posts.build
+    # @post = Post.new
+    # @post.user_id = current_user.id
   end
 
   def create
 
-    @post = Post.new(params.require(:post).permit(:content, :photo_url, :first_name, :last_name, :nickname))
-    @post.user_id = current_user.id
+    @post = current_user.posts.build(params.require(:post).permit(:content, :photo_url, :first_name, :last_name, :nickname))
+    # @post = Post.new(params.require(:post).permit(:content, :photo_url, :first_name, :last_name, :nickname))
+    # @post.user_id = current_user.id
 
     if @post.save
       redirect_to @post, notice: "Post successfully created."
