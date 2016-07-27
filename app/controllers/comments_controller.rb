@@ -18,8 +18,8 @@ class CommentsController < ApplicationController
   def create
 
     # @comment = @post.comments.new(params.require(:comment).permit( :content, :photo_url, :post_id, :user_id, :nickname))
-    @comment = @post.comments.new(params.require(:comment).permit( :user_id, :post_id, :content, :photo_url, :first_name, :last_name, :nickname))
-    @comment[:user_id] = current_user.id
+    @comment = @post.comments.new(params.require(:comment).permit( :user_id, :post_id, :content, :photo_url))
+    @comment.user = current_user
 
     if @comment.save
       redirect_to post_comment_path(@post, @comment), notice: "Comment successfully saved."
@@ -37,7 +37,7 @@ class CommentsController < ApplicationController
 
     @comment = @post.comments.find(params[:id])
 
-    if @comment.update_attributes(params.require(:comment).permit( :user_id, :post_id, :content, :photo_url, :first_name, :last_name, :nickname))
+    if @comment.update_attributes(params.require(:comment).permit( :user_id, :post_id, :content, :photo_url))
       redirect_to post_comment_path(@post, @comment), notice: "Comment successfully updated."
     else
       render :edit
