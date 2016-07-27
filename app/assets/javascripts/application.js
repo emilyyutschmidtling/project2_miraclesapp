@@ -18,7 +18,9 @@
 // = require bootstrap-sprockets
 // = require bootstrap
 
-$(document).click(function() {
-  console.log("clicked");
-  $("#addCommentForm").show();
-})
+$( document ).ready(function() {
+  $('button').click(function() {
+    console.log("clicked");
+    $(this).next().show();
+  })
+});
