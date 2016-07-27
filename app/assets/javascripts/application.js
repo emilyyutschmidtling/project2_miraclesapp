@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// = require bootstrap-sprockets
+// = require bootstrap
+
+$(document).click(function() {
+  console.log("clicked");
+  $("#addCommentForm").show();
+})

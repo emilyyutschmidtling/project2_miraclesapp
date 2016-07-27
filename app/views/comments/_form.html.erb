@@ -1,4 +1,5 @@
 <%= form_for [post, @comment] do |f| %>
+<!-- put @ back in front of post if you want the comment new or edit page to render correctly.  took the @ out so form would render correctly on the posts index page. -->
   <div class="field">
     <%= f.label :content %><br>
     <%= f.text_field :content %>

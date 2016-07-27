@@ -48,6 +48,9 @@ group :development do
 
 end
 
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap_form'
+
 ruby '2.2.3'
 
 group :production do
