@@ -1,0 +1,36 @@
+<h1>View this Post</h1>
+
+<p>
+  <strong>Post ID:</strong>
+  <%= @comment.post_id %>
+</p>
+
+<p>
+  <strong>Comment ID:</strong>
+  <%= @comment.id %>
+</p>
+
+<p>
+  <strong>Commenter ID:</strong>
+  <%= @comment.user_id %>
+</p>
+
+<p>
+  <strong>Commenter Screen Name:</strong>
+  <%= @comment.user.nickname %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @comment.content %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <img src=<%= @comment.photo_url %> alt="">
+</p>
+
+<%#= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', post_comments_path %>
+
+<%= link_to "Delete this comment", post_comment_path(@post, @comment), method: :delete, data: {confirm: "Are you sure you want to delete this comment?"} %>
