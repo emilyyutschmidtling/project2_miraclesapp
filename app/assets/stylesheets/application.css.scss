@@ -21,6 +21,48 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.navbar-inverse {
+  font-family: fantasy;
+}
+
+body {
+  padding-top: 70px;
+}
+
+body.welcome {
+  background-image: url("http://i.imgur.com/MHPwaRN.jpg");
+  background-size: cover;
+  // background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: helvetica;
+}
+
+h1 {
+  font-family: fantasy;
+  color: #404040;
+  font-weight: bold;
+  font-size: 60px;
+  font-stretch: expanded;
+}
+
+h1.posts {
+
+}
+
+body.posts {
+  background-image: url("http://i.imgur.com/iVDNjvP.jpg");
+  background-size: cover;
+  // background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: helvetica;
+}
+
 #addCommentForm {
   display: none;
+}
+
+.jumbotron.post {
+  // background-color: steelblue,
 }

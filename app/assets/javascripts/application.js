@@ -21,6 +21,6 @@
 $( document ).ready(function() {
   $('button').click(function() {
     console.log("clicked");
-    $(this).next().show();
+    $(this).next().toggle();
   })
 });

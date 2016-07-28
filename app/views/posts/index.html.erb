@@ -1,29 +1,36 @@
-<div class="row">
-  <div class="col-sm-12 text-xs-center bootstrap-welcome">
-    <h1>Bootstrap 4 Works!</h1>
-    <p class="lead">Go ahead and build your awesome app now.</p>
+<body class="posts">
+
+<h1 class="posts">Posts</h1>
+
+<div class="container">
+  <% @posts.each do |post| %>
+    <div class="jumbotron post">
+    <h2><%= post.user.nickname %>, <%= time_ago_in_words(post.created_at) %></h2>
+
+    <p><%= post.content %></p>
+
+    <%= button_tag "Add comment", id: "addComment" %>
+
+    <div id="addCommentForm" class="well">
+      <%= render "comments/form", :post => post %>
+    </div>
+
+<button data-toggle="collapse" data-target="#demo">See/Hide Comments</button>
+<div class="collapse">
+      <% post.comments.each do |comment| %>
+    <div class="panel comment">
+      <h6><%= comment.user.nickname %>, <%= time_ago_in_words(comment.created_at) %></h6>
+      <p><%= comment.content %></p>
+    </div>
+    <% end %>
   </div>
+  </div>
+  <% end %>
 </div>
 
-<h1>Posts</h1>
+</body>
 
-<% @posts.each do |post| %>
-  <h2><%= post.user.nickname %>, <%= time_ago_in_words(post.created_at) %></h2>
 
-  <p><%= post.content %></p>
-
-  <%= button_tag "Add comment", id: "addComment" %>
-
-  <div id="addCommentForm">
-    <%= render "comments/form", :post => post %>
-  </div>
-
-  <% post.comments.each do |comment| %>
-
-    <h6><%= comment.user.nickname %>, <%= time_ago_in_words(comment.created_at) %></h6>
-    <p><%= comment.content %></p>
-  <% end %>
-<% end %>
 
 
 <!-- <h1>List of Posts</h1>

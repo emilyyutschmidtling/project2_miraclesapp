@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :nickname, :content, :photo_url])
   end
 
+  def after_sign_in_path_for(users)
+    posts_path
+  end
+
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
