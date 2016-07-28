@@ -22,7 +22,7 @@
 @import "bootstrap";
 
 .navbar-inverse {
-  font-family: fantasy;
+  font-family: Tahoma, Geneva, sans-serif;
 }
 
 body {
@@ -35,11 +35,11 @@ body.welcome {
   // background-position: center;
   background-repeat: no-repeat;
   text-align: center;
-  font-family: helvetica;
+  font-family: Tahoma, Geneva, sans-serif;
 }
 
 h1 {
-  font-family: fantasy;
+  font-family: Tahoma, Geneva, sans-serif;
   color: #404040;
   font-weight: bold;
   font-size: 60px;
@@ -56,7 +56,11 @@ body.posts {
   // background-position: center;
   background-repeat: no-repeat;
   text-align: center;
-  font-family: helvetica;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+.author {
+  font-style: italic;
 }
 
 #addCommentForm {
