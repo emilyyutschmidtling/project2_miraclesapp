@@ -4,7 +4,7 @@
 
 <div class="container">
   <% @posts.each do |post| %>
-    <div class="jumbotron post">
+    <div class="jumbotron post" id="post<%=post.id%>">
     <h2><%= post.user.nickname %>, <%= time_ago_in_words(post.created_at) %></h2>
 
     <p><%= post.content %></p>
