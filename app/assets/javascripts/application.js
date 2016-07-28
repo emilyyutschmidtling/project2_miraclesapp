@@ -19,7 +19,7 @@
 // = require bootstrap
 
 $( document ).ready(function() {
-  $('button').click(function() {
+  $('.addComment').click(function() {
     console.log("clicked");
     $(this).next().toggle();
   })
