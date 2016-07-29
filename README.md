@@ -21,11 +21,11 @@ Currently, the app consists of 3 models - Users, Posts, and Comments.  Setup for
 
 The main page of the app is a stream of all posts and their associated comments.  This page is built in the Post index view page, and allows users to create, edit, and view posts (text and image), as well as make comments on existing posts.
 
-![alt text]https://github.com/eyschmidt1ing/project2_miraclesapp/blob/master/planning_images/Wireframe1.jpg
+![alt text](https://github.com/eyschmidt1ing/project2_miraclesapp/blob/master/planning_images/Wireframe1.jpg)
 
-![alt text]https://github.com/eyschmidt1ing/project2_miraclesapp/blob/master/planning_images/Wireframe2.jpg
+![alt text](https://github.com/eyschmidt1ing/project2_miraclesapp/blob/master/planning_images/Wireframe2.jpg)
 
-![alt text]https://github.com/eyschmidt1ing/project2_miraclesapp/blob/master/planning_images/Wireframe3.jpg
+![alt text](https://github.com/eyschmidt1ing/project2_miraclesapp/blob/master/planning_images/Wireframe3.jpg)
 
 
 **_Known Bugs and Future Upgrades_**
