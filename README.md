@@ -8,7 +8,7 @@ NOTE:  This site is best viewed using Chrome.
 
 Github Repo:  https://github.com/eyschmidt1ing/project2_miraclesapp
 
-My Trello Project Board:  https://trello.com/b/JL8NLGy6/project-1
+My Trello Project Board:  https://trello.com/b/ScN8aLni/project-2
 
 
 **_About the Building of this App_**
