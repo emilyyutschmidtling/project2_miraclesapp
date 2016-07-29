@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
-  before_action :authenticate_user!
+  before_action :authenticate_user!, :except => [:index, :show]
+
 
   def index
     @posts = Post.all
@@ -41,7 +42,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     if @post.update_attributes(params.require(:post).permit(:content, :photo_url, :first_name, :last_name, :nickname))
-      redirect_to posts_url, notice: "Post successfully updated."
+      redirect_to "/posts#post#{@post.id}", notice: "Post successfully updated."
     else
       render :edit
     end
@@ -52,6 +53,15 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
     redirect_to posts_url, notice: 'Post was successfully deleted.'
+  end
+
+  private
+
+  def owned_post
+    unless current_user == @post.user
+      flash[:alert] = "That post doesn't belong to you!"
+      redirect_to root_path
+    end
   end
 
 end
