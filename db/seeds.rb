@@ -17,16 +17,14 @@
 #   }
 # ])
 
-create_table "posts", force: :cascade do |t|
-  t.integer  "user_id"
-  t.text     "content"
-  t.string   "photo_url"
-  t.datetime "created_at", null: false
-  t.datetime "updated_at", null: false
-end
+# NOTE:  I tried to add seed data, but kept getting error messages about violating foreign key restrictions.  I think it might be a conflict with the Devise gem.
 
-user1 = User.create id: 1, email: "hpotter@hogwarts.edu", nickname: "The Chosen One", first_name: "Harry", last_name: "Potter"
-
-user2 = User.create id: 2, email: "rweasley@hogwarts.edu", nickname: "Won Won", first_name: "Ron", last_name: "Weasley"
-
-post1 = Post.create id: 1, user_id: 2, content: "No extra potions homework today!"
+# user1 = User.create email: "hpotter@hogwarts.edu", nickname: "The Chosen One", first_name: "Harry", last_name: "Potter"
+#
+# user2 = User.create email: "rweasley@hogwarts.edu", nickname: "Won Won", first_name: "Ron", last_name: "Weasley"
+#
+# post1 = Post.create content: "Crookshanks didn't eat Scabbers.  So here's a cute cat pic for Hermione.", photo_url: "http://i.imgur.com/EBWst9O.jpg"
+#
+# post2 = Post.create content: "No potions class today - let's celebrate!", photo_url: "http://i.imgur.com/9afFeqF.jpg"
+#
+# comment1 = Comment.create content: "Awesome!  Let's go to the Three Broomsticks."
