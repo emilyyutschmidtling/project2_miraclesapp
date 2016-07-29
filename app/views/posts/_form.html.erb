@@ -7,7 +7,11 @@
     <%= f.label :photo_url, "Add photo url (optional)" %><br>
     <%= f.text_field :photo_url %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <%= f.submit "Save Post", class: "btn btn-default"%>
   </div>
 <% end %>
+
+<div class="modal-footer">
+</div>

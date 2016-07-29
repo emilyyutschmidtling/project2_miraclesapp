@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @comment = Comment.new
+    @post = current_user.posts.build
   end
 
   def show
@@ -24,7 +25,7 @@ class PostsController < ApplicationController
     # @post.user_id = current_user.id
 
     if @post.save
-      redirect_to @post, notice: "Post successfully created."
+      redirect_to posts_url, notice: "Post successfully created."
     else
       render :new
     end
