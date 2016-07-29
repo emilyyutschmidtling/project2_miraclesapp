@@ -23,7 +23,7 @@
       </div>
       <% if user_signed_in? %>
         <ul class="nav navbar-nav">
-          <li><%= link_to 'Everyday Miracles', posts_path, :class => 'navbar-brand' %> </li>
+          <li><%= link_to 'Everyday Miracles', posts_url, :class => 'navbar-brand' %> </li>
           <a class="navbar-brand">Logged in as <strong><i><%= current_user.nickname %></i></strong>.</a>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -32,7 +32,7 @@
         </ul>
       <% else %>
         <ul class="nav navbar-nav">
-          <li><%= link_to 'Everyday Miracles', root_path, :class => 'navbar-brand' %> </li>
+          <li><%= link_to 'Everyday Miracles', posts_url, :class => 'navbar-brand' %> </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-brand'  %> </li>|

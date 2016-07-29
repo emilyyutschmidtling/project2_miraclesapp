@@ -13,13 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery-readyselector
 //= require_tree .
 
 // = require bootstrap
 
-$( document ).ready(function() {
+$('body').ready(function() {
   $('.addComment').click(function() {
     console.log("clicked");
-    $(this).next().toggle();
+    $(this).next().next().toggle();
   })
 });
