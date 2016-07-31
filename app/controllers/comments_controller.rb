@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
 
   def show
     @comment = @post.comments.find(params[:id])
-    # @comment = Comment.find(params[:id])
+    # Using the above instead of @comment = Comment.find(params[:id]) in order to find comments associated to a specific post.
   end
 
   def new
@@ -17,15 +17,12 @@ class CommentsController < ApplicationController
 
   def create
 
-    # @comment = @post.comments.new(params.require(:comment).permit( :content, :photo_url, :post_id, :user_id, :nickname))
     @comment = @post.comments.new(params.require(:comment).permit( :user_id, :post_id, :content, :photo_url))
+
     @comment.user = current_user
 
     if @comment.save
-      # redirect_to :back, notice: "Comment successfully saved."
-      # redirect_to posts_path(@post), notice: "Comment successfully saved."
       redirect_to "/posts#post#{@post.id}", notice: "Comment successfully saved."
-      @updateClass = "in"
     else
       render :new
     end

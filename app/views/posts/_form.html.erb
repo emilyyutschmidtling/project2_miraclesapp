@@ -1,17 +1,24 @@
+<!-- NOTE: This is the form being used by the modal for New Post. -->
+<!-- NOTE: This form partial was originally intended to be used for both New Post and Edit Post, but the New Post modal needs both "Close" and "Submit" buttons. whereas the Edit Post page just needs "Sumit."  So this form partial is now being used only for New Post; the form for Edit Post is now in the posts/edit.html.erb file. -->
+
+
 <%= form_for(@post) do |f| %>
+
   <div class="field">
     <%= f.label :content %><br>
     <%= f.text_field :content %>
   </div>
+
   <div class="field">
     <%= f.label :photo_url, "Add photo url (optional)" %><br>
     <%= f.text_field :photo_url %>
   </div>
+
   <div class="actions modal-footer">
     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
     <%= f.submit "Save Post", class: "btn btn-default"%>
   </div>
+
 <% end %>
 
-<div class="modal-footer">
 </div>

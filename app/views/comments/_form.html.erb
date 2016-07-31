@@ -1,5 +1,7 @@
+<!-- NOTE: This form partial was originally intended to be used for both New Comment and Edit Comment, but each action needed different form_for parameters (post and @comment for New Comment; @comment alone for Edit Comment).  So this form partial is now being used only for New Comment; the form for Edit Comment is now in the comments/edit.html.erb file. -->
+
 <%= form_for [post, @comment] do |f| %>
-<!-- put @ back in front of post if you want the comment new or edit page to render correctly.  took the @ out so form would render correctly on the posts index page. -->
+<!-- put @ back in front of post if you want the comment new or edit page to render correctly.  Took the @ out so form would render correctly on the posts index page. -->
 <p><em><small>Click button again to cancel</small></em></p>
   <div class="field">
     <%= f.label :content %><br>

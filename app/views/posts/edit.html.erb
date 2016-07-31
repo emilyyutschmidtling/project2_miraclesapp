@@ -1,5 +1,26 @@
+NOTE:
+
 <h1>Edit Post</h1>
 
-<%= render 'form' %>
+<%= form_for(@post) do |f| %>
 
-<%= link_to 'Back', posts_path %>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </div>
+
+  <div class="field">
+    <%= f.label :photo_url, "Add photo url (optional)" %><br>
+    <%= f.text_field :photo_url %>
+    <% unless @post.photo_url == "" %>
+      <p>
+        <img src=<%= @post.photo_url %> alt="">
+      </p>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update Post / Return to Main Posts Page"%>
+  </div>
+
+<% end %>
