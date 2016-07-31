@@ -56,3 +56,5 @@ ruby '2.2.3'
 group :production do
   gem 'rails_12factor'
 end
+
+gem 'jquery-turbolinks'

@@ -13,11 +13,11 @@ My Trello Project Board:  https://trello.com/b/ScN8aLni/project-2
 
 **_About the Building of this App_**
 
-This app was built using Ruby, Rails, Bootstrap, HTML, and CSS, along with a splash of Javascript and JQuery, and tested on Chrome.  User authentication is via Devise.
+This app was built using Ruby, Rails, PostgreSQL, Bootstrap, HTML, and CSS, along with a splash of Javascript and JQuery, and tested on Chrome.  User authentication is via Devise.
 
 Currently, the app consists of 3 models - Users, Posts, and Comments.  Setup for the Users model was through the Devise gem.  My next step was to fully CRUD out the Post and Comment models.  
 
-![alt text]https://github.com/eyschmidt1ing/project2_miraclesapp/blob/master/planning_images/Project%202%20-%20ERD.jpg
+![alt text](https://github.com/eyschmidt1ing/project2_miraclesapp/blob/master/planning_images/Project%202%20-%20ERD.jpg)
 
 The main page of the app is a stream of all posts and their associated comments.  This page is built in the Post index view page, and allows users to create, edit, and view posts (text and image), as well as make comments on existing posts.
 

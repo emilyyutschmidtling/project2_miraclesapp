@@ -25,6 +25,7 @@ class CommentsController < ApplicationController
       # redirect_to :back, notice: "Comment successfully saved."
       # redirect_to posts_path(@post), notice: "Comment successfully saved."
       redirect_to "/posts#post#{@post.id}", notice: "Comment successfully saved."
+      @updateClass = "in"
     else
       render :new
     end
@@ -40,7 +41,7 @@ class CommentsController < ApplicationController
     @comment = @post.comments.find(params[:id])
 
     if @comment.update_attributes(params.require(:comment).permit( :user_id, :post_id, :content, :photo_url))
-      redirect_to post_comment_path(@post, @comment), notice: "Comment successfully updated."
+      redirect_to "/posts#post#{@post.id}", notice: "Comment successfully updated."
     else
       render :edit
     end
@@ -50,7 +51,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-    redirect_to posts_url, notice: "Comment was successfully deleted."
+    redirect_to "/posts#post#{@post.id}", notice: "Comment was successfully deleted."
   end
 
 
