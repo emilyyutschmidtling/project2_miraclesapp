@@ -6,7 +6,7 @@ No matter what else is going on in the world at large, there are small miracles 
 Please visit:  https://miracles-app.herokuapp.com
 NOTE:  This site is best viewed using Chrome.
 
-Github Repo:  https://github.com/eyschmidt1ing/project2_miraclesapp
+Github Repo:  https://github.com/emilyyutschmidtling/project2_miraclesapp
 
 My Trello Project Board:  https://trello.com/b/ScN8aLni/project-2
 
@@ -17,15 +17,15 @@ This app was built using Ruby, Rails, PostgreSQL, Bootstrap, HTML, and CSS, alon
 
 Currently, the app consists of 3 models - Users, Posts, and Comments.  Setup for the Users model was through the Devise gem.  My next step was to fully CRUD out the Post and Comment models.  
 
-![alt text](https://github.com/eyschmidt1ing/project2_miraclesapp/blob/master/planning_images/Project%202%20-%20ERD.jpg)
+![alt text](https://github.com/emilyyutschmidtling/project2_miraclesapp/blob/master/planning_images/Project%202%20-%20ERD.jpg)
 
 The main page of the app is a stream of all posts and their associated comments.  This page is built in the Post index view page, and allows users to create, edit, and view posts (text and image), as well as make comments on existing posts.
 
-![alt text](https://github.com/eyschmidt1ing/project2_miraclesapp/blob/master/planning_images/Wireframe1.jpg)
+![alt text](https://github.com/emilyyutschmidtling/project2_miraclesapp/blob/master/planning_images/Wireframe1.jpg)
 
-![alt text](https://github.com/eyschmidt1ing/project2_miraclesapp/blob/master/planning_images/Wireframe2.jpg)
+![alt text](https://github.com/emilyyutschmidtling/project2_miraclesapp/blob/master/planning_images/Wireframe2.jpg)
 
-![alt text](https://github.com/eyschmidt1ing/project2_miraclesapp/blob/master/planning_images/Wireframe3.jpg)
+![alt text](https://github.com/emilyyutschmidtling/project2_miraclesapp/blob/master/planning_images/Wireframe3.jpg)
 
 
 **_Known Bugs_**
